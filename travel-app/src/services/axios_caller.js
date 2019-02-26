@@ -1,26 +1,22 @@
 const axios = require('axios')
 
 const TOKEN = process.env.REACT_APP_TOKEN;
+
 const BASE_URL = `http://aviation-edge.com/v2/public/flights?key=${TOKEN}&limit=100`;
 
-const getPorts = async () => {
+/*const getPorts = async () => {
   try {
-    return await axios.get(`http://aviation-edge.com/v2/public/flights?key=${TOKEN}&limit=100`)
+    return await axios.get(`http://aviation-edge.com/v2/public/flights?key=${TOKEN}&limit=5`)
   } catch (error) {
     console.error(error)
   }
 }
 
-export  { getPorts };
+export  { getPorts };*/
 
-/*import axios from 'axios';
-
-const TOKEN = process.env.REACT_APP_TOKEN;
-const BASE_URL = 'https://newsapi.org/v2';
-
-const getNews = async() => {
-  const resp = await axios(`${BASE_URL}/top-headlines?country=us&apiKey=${TOKEN}`)
-  return resp.data.articles
+const getPorts = async () => {
+  const resp = await axios.get(`http://aviation-edge.com/v2/public/flights?key=${TOKEN}&limit=5`)
+  return resp.data
 }
 
-export {getNews}*/
+export  { getPorts };

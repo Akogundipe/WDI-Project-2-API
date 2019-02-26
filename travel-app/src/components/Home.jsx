@@ -6,8 +6,7 @@ const Home = () => {
     <p>
     Welcome!
     </p>
-    <img src="https://cf.girlsaskguys.com/q1467384/7ffe1d4a-c832-4170-9431-94ba56d97333.jpg" />
-    <img src="https://media.giphy.com/media/pHb82xtBPfqEg/giphy.gif" />
+    <img src="https://www.grammarly.com/blog/wp-content/uploads/2016/09/Traveling.jpg" />
     </div>
   )
 }
