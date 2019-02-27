@@ -26,10 +26,12 @@ class Airports extends Component {
     {props.airports.map(airport => (
       <div key={airport.nameAirport}>
         <h2>{airport.nameAirport} Airport</h2>
+        <form>
         <label htmlFor="airport">Airport </label>
         <input type="text" id="airport"
           value={this.state.userInput}
           onChange={this.handleChange}/>
+          </form>
       </div>
     ))}
     </section>
