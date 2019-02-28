@@ -20,7 +20,7 @@ const getArrivals = async (code) => {
   }
 
   const getAirports = async () => {
-    const resp = await axios.get(`https://aviation-edge.com/v2/public/airportDatabase?key=${TOKEN}`)
+    const resp = await axios.get(`https://aviation-edge.com/v2/public/airportDatabase?key=${TOKEN}&codeIso2Country=US`)
     return resp.data
   }
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 function GetFlights(props) {
   const tempFlights = '';
-  // const tempFlights = props.flights.filter(flight => props.match.params.iatacode === flight.arrival.iataCode || props.match.params.iatacode === flight.departure.iataCode)
+   //const tempFlights = props.flights.filter(flight => props.match.params.icaoCode === flight.arrival.icaoCode || props.match.params.icaoCode === flight.departure.icaoCode)
   return (
     <section>
       {
