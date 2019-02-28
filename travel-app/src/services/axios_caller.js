@@ -10,12 +10,12 @@ const getFlights = async () => {
 }
 
 const getArrivals = async (code) => {
-  const resp = await axios.get(`http://aviation-edge.com/v2/public/timetable?key=${TOKEN}&icaoCode=${code}&type=arrival`)
+  const resp = await axios.get(`http://aviation-edge.com/v2/public/timetable?key=${TOKEN}&icaoCode=k${code}&type=arrival`)
   return resp.data
 }
 
   const getDepartures = async (code) => {
-    const resp = await axios.get(`http://aviation-edge.com/v2/public/timetable?key=${TOKEN}&icaoCode=${code}&type=departure`)
+    const resp = await axios.get(`http://aviation-edge.com/v2/public/timetable?key=${TOKEN}&icaoCode=k${code}&type=departure`)
     return resp.data
   }
 
