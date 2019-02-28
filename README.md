@@ -1,12 +1,9 @@
 # WDI-Project-2-API
 
-draw a component hierarchy would be a great way to indicate which components need state and which components need props.
-
-# Wireframe
-Image on Desktop
+http://papaya-flight-checker.surge.sh/
 
 #Airport information
-My React app will be informational travel app in regards to airports using aviation-edge.com API data. I plan to make transportation infographic regarding flights at airports. Information such as whether an airport has departures or arrivals.
+My React app is an informational travel app in regards to airports using aviation-edge.com API data. It renders an infographic regarding flights at airports. Information such as whether an airport has departures or arrivals.
 
 #User Story
 People who love to travel or travel often through business will be using this app.
