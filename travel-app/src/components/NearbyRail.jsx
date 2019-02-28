@@ -10,3 +10,5 @@ function GetBuses(props) {
 }
 
 export default GetBuses;
+
+check if its the right code for an airport

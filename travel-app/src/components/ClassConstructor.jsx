@@ -13,9 +13,9 @@ class Airports extends Component {
 
   .filter(word => {word.includes(this.state.userInput)})
 
-  handleChange = (e) => {
+  handleChange = (ev) => {
     this.setState({
-      userInput: e.target.value
+      userInput: ev.target.value
     })
     this.props.onChange(event.target.value)
   }

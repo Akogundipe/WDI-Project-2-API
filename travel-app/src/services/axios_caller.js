@@ -5,17 +5,17 @@ const TOKEN = process.env.REACT_APP_TOKEN;
 const BASE_URL = `http://aviation-edge.com/v2/public/flights?key=${TOKEN}&limit=100`;
 
 const getFlights = async () => {
-  const resp = await axios.get(`http://aviation-edge.com/v2/public/flights?key=${TOKEN}&limit=100`)
+  const resp = await axios.get(`http://aviation-edge.com/v2/public/flights?key=${TOKEN}`)
   return resp.data
 }
 
-const getArrivals = async () => {
-  const resp = await axios.get(`http://aviation-edge.com/v2/public/timetable?key=${TOKEN}&iataCode=JFK&type=arrival`)
+const getArrivals = async (code) => {
+  const resp = await axios.get(`http://aviation-edge.com/v2/public/timetable?key=${TOKEN}&icaoCode=${code}&type=arrival`)
   return resp.data
 }
 
-  const getDepartures = async () => {
-    const resp = await axios.get(`http://aviation-edge.com/v2/public/timetable?key=${TOKEN}&iataCode=JFK&type=departure`)
+  const getDepartures = async (code) => {
+    const resp = await axios.get(`http://aviation-edge.com/v2/public/timetable?key=${TOKEN}&icaoCode=${code}&type=departure`)
     return resp.data
   }
 

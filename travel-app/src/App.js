@@ -16,28 +16,38 @@ class App extends Component {
     this.state = {
       airports: [],
       flights: [],
-      departures: [],
-      arrivals: []
+      arrivals: [],
+      departures: []
+
     }
+
+    this.newFunction = this.newFunction.bind(this)
   }
 
   async componentDidMount() {
     const airports = await getAirports();
     const flights = await getFlights();
-    const departures = await getDepartures();
-    const arrivals = await getArrivals();
     this.setState({
       airports: airports,
-      flights: flights,
-      departures: departures,
-      arrivals: arrivals
+      flights: flights
     })
   }
+
+  async newFunction(code) {
+    const arrivals = await getArrivals(code);
+    const departures = await getDepartures(code);
+    this.setState({
+      arrivals: arrivals,
+      departures: departures
+    })
+  }
+
+
+
 
   render() {
     return (
       <div className="App">
-        Running fine
         <nav>
           <Link to="/">Home</Link>
           <Link to="/airports">Airports</Link>
@@ -48,8 +58,8 @@ class App extends Component {
         </nav>
         <main>
           <Route exact path="/" render={Home}/>
-          <Route path="/airports" render={(props) => <Airports {...props} airports={this.state.airports} />} />
-          <Route path="/flights" render={(props) => <GetFlights {...props} flights={this.state.flights} />} />
+          <Route path="/airports" render={(props) => <Airports {...props} airports={this.state.airports} newFunction={this.newFunction}/>} />
+          <Route path="/flights/:icaocode" render={(props) => <GetFlights {...props} flights={this.state.flights} />} />
           <Route path="/arrivals" render={(props) => <Arrivals {...props} arrivals={this.state.arrivals} />} />
           <Route path="/departures" render={(props) => <Departures {...props} departures={this.state.departures} />} />
             <Route path="/about" render={About}/>
