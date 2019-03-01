@@ -8,8 +8,9 @@ function Departures(props) {
       <div>
     {props.departures.map(departing => (
       <div key={departing.flight.icaoNumber}>
-        <h1>{departing.status}</h1>
+
         <h2>Departing {departing.departure.scheduledTime}</h2>
+        <strong>Airline:</strong>&emsp;<span>{departing.airline.name}</span>&emsp;<strong>Status:</strong>&emsp;<span>{departing.status}</span>&emsp;<strong>Terminal:</strong>&emsp;<span>{departing.departure.terminal}</span>
         <p></p>
       </div>
     ))}

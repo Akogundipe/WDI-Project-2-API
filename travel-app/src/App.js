@@ -51,7 +51,6 @@ class App extends Component {
         <nav>
           <Link to="/">Home</Link>
           <Link to="/airports">Airports</Link>
-          <Link to="/flights">Flight Data</Link>
           <Link to="/arrivals">Arrivals</Link>
           <Link to="/departures">Departures</Link>
           <Link to="/about">About</Link>

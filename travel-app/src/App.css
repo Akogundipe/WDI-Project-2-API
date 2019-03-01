@@ -3,10 +3,12 @@ img {
   width: 300px;
 }
 
-section {
-  background: papayawhip;
-}
-
 nav a {
   padding-left: 20px;
+}
+
+body {
+  background-image: url("https://images.livemint.com/rf/Image-621x414/LiveMint/Period2/2017/06/20/Photos/Processed/plane-kVKH--621x414@LiveMint.jpg");
+  background-size: cover;
+  height: 100%;
 }

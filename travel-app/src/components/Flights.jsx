@@ -10,7 +10,8 @@ function GetFlights(props) {
         <div>
         {props.flights.map(flight => (
         <div key={flight.flight.icaoNumber}>
-          <h2>Flight number {flight.flight.number}</h2>
+          <h2>Flight number {flight.flight.icaoNumber}</h2>
+          <strong>Status:</strong>&emsp;<span>{flight.status}</span>
           <p></p>
         </div>
       ))}
